@@ -1,0 +1,112 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 70% ;
+    margin-top: 5%;
+    margin-left: 15%;
+    height: 30%;
+    border-radius: 25px;  
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:click .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100% !important;
+    height: auto;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: dodgerblue;
+    background-color: rgba(30, 45, 255, 0.188);
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  label{
+    font-size: 1rem;
+  }
+
+  .search{
+    background-color: dodgerblue;
+    color: white;
+    vertical-align: middle;
+  }
+  .results-card{
+    border: none !important;
+    height: auto !important;
+  }
+  .results-container{
+    border-radius: 25px !important;
+    padding: 10px !important;
+    background-color: rgba(102, 78, 239,0.5) !important;
+  }
+  .result-header{
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .result-line{
+    text-align:left;
+    font-size: 1.3rem !important;
+  }
+
+  .datafield{
+    min-height: 57px !important;
+    border-bottom: 1px dotted white;
+  }
+
+  .custom-error{
+    margin-top: 11px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    margin-bottom: 20px;
+    display:none;
+  }
+
+  .paginationRow {
+    padding-left: 15%;
+    padding-top: 2%;
+  }  
+
+  .pagination-container {
+    border: 1 px solid red !important;
+    background-color: white;
+    border-radius: 25px;
+    margin-left: 2% !important;
+    margin-top: 2% !important;
+  }
+
+ 
+  .page-active{
+    background-color: rgba(102, 78, 239, 0.5) !important;
+    border: 1px solid rgb(102, 78, 239) !important;
+  }
